@@ -1,40 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do Zero ao Deploy — Página Web Completa</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/layout.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Do Zero ao Deploy — página exemplo em HTML, CSS e JavaScript puro. Projeto responsivo e acessível." />
+  <title>Do Zero ao Deploy</title>
+
+  <!-- Link para os arquivos de estilo e script -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao nosso site!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
-    <main>
-        <section>
-            <h2>Início</h2>
-            <p>Este é o ponto de partida para o seu projeto web. Aqui você pode adicionar conteúdo interessante.</p>
-        </section>
-    </main>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="logo" aria-label="Logotipo Do Zero ao Deploy">
+        <a class="site-title" href="#" title="Ir para a página inicial">
+          <span class="logo-mark" aria-hidden="true"></span>
+          Do Zero ao Deploy
+        </a>
+      </div>
 
-    <footer>
-        <p>&copy; 2023 Do Zero ao Deploy. Todos os direitos reservados.</p>
-    </footer>
+      <button id="btn-menu" class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
 
-    <script src="js/main.js"></script>
-    <script src="js/modules/nav.js"></script>
-    <script src="js/modules/carousel.js"></script>
+      <nav id="primary-navigation" class="primary nav" role="navigation" aria-label="Navegação principal" aria-hidden="false">
+        <ul class="nav-list">
+          <li><a href="#" title="Início" aria-current="page">Início</a></li>
+          <li><a href="#sobre" title="Sobre">Sobre</a></li>
+          <li><a href="#servicos" title="Serviços">Serviços</a></li>
+          <li><a href="#contato" title="Contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <h1 id="hero-title">Bem-vindo ao Do Zero ao Deploy</h1>
+        <p class="lead">Um exemplo prático de página web completa usando apenas HTML5, CSS3 e JavaScript puro — sem bibliotecas externas. Explore, personalize e aprenda.</p>
+      </div>
+    </section>
+
+    <section id="cards" class="cards-section container" aria-labelledby="cards-title">
+      <h2 id="cards-title" class="visually-hidden">Informações rápidas</h2>
+
+      <div class="cards-grid">
+        <article class="card" role="article" aria-labelledby="card-1-title">
+          <h3 id="card-1-title">Tecnologias</h3>
+          <p>HTML5, CSS3 e JavaScript puro — fundamentos essenciais para criar interfaces acessíveis e responsivas.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="card-2-title">
+          <h3 id="card-2-title">Etapas do Projeto</h3>
+          <p>Planejamento, desenvolvimento, testes e deploy. Este projeto exemplifica uma estrutura simples e prática.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="card-3-title">
+          <h3 id="card-3-title">Acessibilidade</h3>
+          <p>Uso de semântica, navegação por teclado, contraste e atributos ARIA para melhorar a experiência de todos os usuários.</p>
+        </article>
+
+        <article class="card" role="article" aria-labelledby="card-4-title">
+          <h3 id="card-4-title">Curiosidades</h3>
+          <p>Ideal para deploy em GitHub Pages, Netlify ou Vercel e como portfólio de estudos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="container about-section" aria-labelledby="sobre-title">
+      <h2 id="sobre-title">Sobre este projeto</h2>
+      <p>Separa estrutura (HTML), estilo (CSS) e comportamento (JS). Código simples e comentado para estudo.</p>
+    </section>
+
+    <section id="servicos" class="container services-section" aria-labelledby="servicos-title">
+      <h2 id="servicos-title">Serviços</h2>
+      <p>Exemplos de páginas estáticas, tutoriais e orientação para deploy em plataformas gratuitas.</p>
+    </section>
+
+    <section id="contato" class="container contact-section" aria-labelledby="contato-title">
+      <h2 id="contato-title">Contato</h2>
+      <p>Use os links do rodapé para enviar um e-mail ou acessar perfis.</p>
+    </section>
+  </main>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo" hidden>↑</button>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year" aria-hidden="true"></span> Do Zero ao Deploy. Todos os direitos reservados.</p>
+      <ul class="footer-links" aria-label="Links de contato">
+        <li><a href="mailto:contato@exemplo.com" title="Enviar e-mail">contato@exemplo.com</a></li>
+        <li><a href="#" title="GitHub">GitHub</a></li>
+        <li><a href="#" title="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
